@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=600, height=600, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Classic Snake game for Meta Ray-Ban Display glasses">
+
+    <meta
+        name="mrbd-web-app-capable"
+        content="yes">
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="favicon.png">
+
+    <title>Snake</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="app">
+
+        <!-- HOME SCREEN -->
+        <section
+            id="home-screen"
+            class="screen"
+            aria-label="Snake home screen">
+
+            <h1>SNAKE</h1>
+
+            <p>Classic Snake for Ray-Ban Display</p>
+
+            <nav
+                class="menu"
+                aria-label="Main menu">
+
+                <a
+                    id="play-button"
+                    class="menu-button"
+                    href="?screen=game">
+                    PLAY
+                </a>
+
+                <a
+                    id="instructions-button"
+                    class="menu-button"
+                    href="?screen=instructions">
+                    HOW TO PLAY
+                </a>
+
+            </nav>
+        </section>
+
+
+        <!-- INSTRUCTIONS SCREEN -->
+        <section
+            id="instructions-screen"
+            class="screen"
+            aria-label="Snake instructions">
+
+            <h1>HOW TO PLAY</h1>
+
+            <p>Move the snake with:</p>
+
+            <p>↑ ↓ ← →</p>
+
+            <p>Eat the food.</p>
+
+            <p>Don't hit the wall or yourself.</p>
+
+            <a
+                id="instructions-back-button"
+                class="menu-button"
+                href="?screen=home">
+                BACK
+            </a>
+        </section>
+
+
+        <!-- GAME SCREEN -->
+        <section
+            id="game-screen"
+            class="screen"
+            aria-label="Snake game">
+
+            <canvas
+                id="game"
+                width="600"
+                height="600">
+            </canvas>
+
+            <nav
+                id="controls"
+                aria-label="Snake controls">
+
+                <button
+                    type="button"
+                    id="button-up"
+                    data-action="up"
+                    aria-label="Move up">
+                    ↑
+                </button>
+
+                <button
+                    type="button"
+                    id="button-left"
+                    data-action="left"
+                    aria-label="Move left">
+                    ←
+                </button>
+
+                <button
+                    type="button"
+                    id="button-enter"
+                    data-action="enter"
+                    aria-label="Start, pause or restart">
+                    ENTER
+                </button>
+
+                <button
+                    type="button"
+                    id="button-right"
+                    data-action="right"
+                    aria-label="Move right">
+                    →
+                </button>
+
+                <button
+                    type="button"
+                    id="button-down"
+                    data-action="down"
+                    aria-label="Move down">
+                    ↓
+                </button>
+
+            </nav>
+
+            <a
+                id="game-back-button"
+                class="game-back-button"
+                href="?screen=home">
+                BACK
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

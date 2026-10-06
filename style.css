@@ -1,0 +1,254 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 600px;
+    height: 600px;
+
+    overflow: hidden;
+
+    background: black;
+
+    font-family: monospace;
+    font-size: 18px;
+}
+
+body {
+    color: #FFFFFF;
+}
+
+#app {
+    width: 600px;
+    height: 600px;
+}
+
+.screen {
+    position: relative;
+
+    width: 600px;
+    height: 600px;
+}
+
+
+/* ==================================================
+   HOME / INSTRUCTIONS
+   ================================================== */
+
+#home-screen,
+#instructions-screen {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+#home-screen h1,
+#instructions-screen h1 {
+    margin: 0 0 24px;
+
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+#home-screen p,
+#instructions-screen p {
+    margin: 8px 0;
+
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+/* ==================================================
+   MENU
+   ================================================== */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    margin-top: 30px;
+
+    align-items: center;
+}
+
+.menu-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 190px;
+    min-height: 54px;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+
+    background: #0A0A0F;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-button:focus {
+    outline: 3px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+
+/* ==================================================
+   GAME
+   ================================================== */
+
+#game-screen {
+    position: relative;
+}
+
+canvas {
+    display: block;
+
+    width: 600px;
+    height: 600px;
+}
+
+
+/* ==================================================
+   D-PAD CONTROLS
+   ================================================== */
+
+#controls {
+    position: absolute;
+
+    bottom: 12px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: grid;
+
+    grid-template-columns:
+        46px
+        84px
+        46px;
+
+    grid-template-rows:
+        46px
+        46px
+        46px;
+
+    gap: 5px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+#button-up {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#button-left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#button-enter {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#button-right {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#button-down {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#controls button {
+    width: 46px;
+    height: 46px;
+
+    padding: 0;
+
+    border: 1px solid #555;
+    border-radius: 4px;
+
+    background: #0A0A0F;
+
+    color: #E4E6EB;
+
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#controls #button-enter {
+    width: 84px;
+
+    font-size: 18px;
+}
+
+#controls button:focus {
+    outline: 3px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+#controls button:active {
+    background: #E4E6EB;
+    color: black;
+}
+
+
+/* ==================================================
+   GAME BACK BUTTON
+   ================================================== */
+
+.game-back-button {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    padding: 8px 12px;
+
+    border: 1px solid #FFFFFF;
+
+    background: #0A0A0F;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.game-back-button:focus {
+    outline: 3px solid #FFFFFF;
+    outline-offset: 3px;
+}
